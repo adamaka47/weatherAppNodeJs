@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="RU-ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Приложение для чека погоды</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    
+    <div class="app">
+        <div class="app__header">
+            <% if (weather) { %>
+            <h1><%=weather%></h1>
+            <% } %>
+            <% if (error) { %>
+            <p class="error">
+                <%=error%>
+            </p>
+            <% } %>
+        </div>
+        <form class="app__content" method="POST" action="/">
+            <div class="input">
+                <label for="reg">
+                    Ваш город
+                </label>
+                <input type="text" id="reg" placeholder="Ваш город" name="reg">
+            </div>
+            <button class="btn">Показать погоду</button>
+        </form>
+    </div>
+
+</body>
+</html>
